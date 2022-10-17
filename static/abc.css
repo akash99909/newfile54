@@ -1,0 +1,103 @@
+
+.allheadings{
+    color: #198754;
+
+}
+
+
+.inputbox{
+    width: 7.18%;
+    display: inline-block;
+}
+.newColumn{
+    display: inline-block;
+    width: 100%;
+}
+.allbox{
+    width: 7.18%;
+    
+}
+.firstcontainer{
+    display: flex;
+    
+}
+.secondcontainer{
+    display: flex;
+    margin-top: 2rem;
+}
+.thirdcontainer{
+    display: flex;
+    
+}
+.navba{
+    color: #198754;
+}
+.toshow{
+    background-color:#20c997;
+    color: white;
+    text-align: center;
+    border: 1px solid black;
+    width: 25rem;
+    pointer-events: none;
+}
+
+.edit{
+    
+}
+.fullcontainer{
+    display: flex;
+}
+.anscontainer{
+    width: 30rem;
+    height: 6rem;
+}
+.maincontainer{
+    
+}
+.secondcontainern{
+    display: flex;
+}
+.boxcontainer{
+    margin-left: 0rem;
+    margin-top: 3rem;
+    position: absolute;
+}
+.bot{
+    position:relative;
+    margin-left: 0%;
+    width: 10rem;
+    background-color: #20c997;
+
+}
+.bhh{
+    margin-left: 210%;
+    
+    
+}
+.bhkk{
+    margin-left: 35%;
+
+}
+.bth{
+    display: flex;
+    justify-content: center;
+    background-color: #0dcaf0;
+
+}
+.toprow{
+    background-color: rgb(20, 20, 92);
+    position:relative;
+    width: 86.1%;
+    left:0;
+    color: white;
+    text-align: center;
+    pointer-events: none;
+}
+.b {
+    width: 7.18%;
+    height: 5rem;
+    font-size: 12px;
+    background-color: #20c997;
+    pointer-events: none;
+    text-overflow: ellipsis;
+}

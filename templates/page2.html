@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clusterestimation</title>
+    <link href="{{ url_for('static', filename='style12.css') }}" rel="stylesheet">
+
+
+
+
+    <!-- Google Web Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap" rel="stylesheet"> 
+	
+		<!-- Icon Font Stylesheet -->
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+	
+		<!-- Libraries Stylesheet -->
+		<link href="{{ url_for('static', filename='animate.min.css') }}" rel="stylesheet">
+		<link href="{{ url_for('static', filename='owl.min.css') }}" rel="stylesheet">
+	
+		<!-- Customized Bootstrap Stylesheet -->
+		<link href="{{ url_for('static', filename='bootstrap.min.css') }}" rel="stylesheet">
+	
+		<!-- Template Stylesheet -->
+		<link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
+</head>
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+        <div class="container-xxl position-relative p-0">
+            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+                <a href="index.html" class="navbar-brand p-0">
+                    <h1 class="m-0">DE-Accelerator</h1>
+                    <!-- <img src="img/logo.png" alt="Logo"> -->
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0">
+                        <a href="index.html" class="nav-item nav-link active">Home</a>
+                        
+                        
+                        </div>
+                        
+                    
+                </div>
+            </nav>
+    <br><br><br><br><br>
+    <form class="form" style="max-width: 100%; width: 100%;"> 
+        <div class="main">  
+            <div class="firstspace">
+                
+                <input type="text" class="rowclass" value="Rough Calculation">   
+                <div class="formcontainer">
+                    <div class="onec">
+                        <input type="text" value="User Inputs" class="tr">
+                        <div class="fc">
+                            <input type="text" class="toshow "  value="Replication Factor"><input name="sum" value="" id="rep_fac"    class="vc1 inputclass">
+                        </div>
+                        <div class="fc">
+                            <input type="text" class="toshow"  value="Intermediate Data"><input name="sum" value="" id="int_data"  class="vc1 inputclass">
+                        </div>
+                        <div class="fc">
+                            <input type="text" class="toshow"  value="Available disk size for storage (TB)"><input name="sum" value="" id ="av_disk"  class="vc1 inputclass">
+                        </div>
+                    </div>
+                    <div class="twoc mar">
+                        <input type="text" value="Inputs Derived from Data Size Estimation" class="tr">
+                        <div class="fc">
+                            <input type="text" class="toshow" value="Total Existing Data Size (TB)"><input name="sum" value="" id="tot_exi"class="vc outbox">
+                        </div>
+                    </div>
+                    <div class="threec mar">
+                        <input type="text" value="Calculation" class="tr">
+                        <div class="fc">
+                            <input type="text" class="toshow" value="Total Storage requirement (TB)"><input name="sum" value="" id="tot_stor_req"class="vc">
+                        </div>
+                        <div class="fc">
+                            <input type="text" class="toshow" value="Total number of required data nodes (approx.)"><input name="sum" value="" id="totalnumber" class="vc">
+                        </div>
+                    </div>
+                </div>
+                <input type="text" class="rowclass mt" value="Actual Calculation">
+                <div class="formcontainer">
+                    <div class="onec">
+                        <input type="text" value="User Inputs" class="tr">
+                        <div class="fc">
+                            <input type="text" class="toshow" value="Disk space utilization"><input name="sum" value="" id="disk_space_util" class="vc1 inputclass">
+                        </div>
+                        <div class="fc">
+                            <input type="text" class="toshow" value="Compression ratio"><input name="sum" value="" id="Compression_ratio" class="vc1 inputclass">
+                        </div>
+                    </div>
+                    <div class="threec martm">
+                        <input type="text" value="Calculation" class="tr">
+                        <div class="fc">
+                            <input type="text" class="toshow" value="Total Storage requirement (TB)"><input name="sum" value="" id="Total_Storage_requirement" class="vc outbox">
+                        </div>
+                        <div class="fc">
+                            <input type="text" class="toshow" value="Available disk size for storage (TB)"><input name="sum" value="" id="Available_disk_size_for_storage" class="vc outbox">
+                        </div>
+                        <div class="fc">
+                            <input type="text" class="toshow" value="Total number of required data nodes (approx.)"><input name="sum" value="" class="vc outbox" id="Total_number_of_required_data_nodes">
+                        </div>
+                        <div class="fc">
+                            <input type="text" class="toshow" value="Actual usable cluster size (100 %) (TB)"><input name="sum" value="" id="Actual_usable_cluster_size" class="vc outbox">
+                        </div>
+                    </div>
+                   
+                </div>
+                <input type="text" class="rowclass mt" value="Projection +1 Year ">
+                <div class="formcontainer">
+                    <div class="twoc tm">
+                        <input type="text" value="User Inputs" class="tr">
+                        <div class="fc bs">
+                            <input type="text" class="toshow" value="Overall Average Estimated % Quaterly Volume Incremental"><input name="sum" value=" " class="vc" id="Overall_Average_Estimated">
+                        </div>
+                    </div>
+                    
+                    <div class="threec mar">
+                        <input type="text" value="Projection"  class="tr11"><input type="text" value="Additional Data"  class="tr22"><input type="text" value="Additional Data Nodes"  class="tr22">
+                        <div class="fc">
+                            <input type="text" class="tr1" value="1st Quarter"><input name="sum" value="" class="tr2" id="1st_Quarter_1"><input name="sum" value="" class="tr2" id="1st_Quarter_2">
+                        </div>
+                        <div class="fc">
+                            <input type="text" class="tr1" value="2nd  Quarter"><input name="sum" value="" class="tr2" id="2nd_Quarter_1"><input name="sum" value="" class="tr2" id="2nd_Quarter_2">
+                        </div>
+                        <div class="fc">
+                            <input type="text" class="tr1" value="3rd Quarter"><input name="sum" value="" class="tr2" id="3rd_Quarter_1"><input name="sum" value="" class="tr2" id="3rd_Quarter_2">
+                        </div>
+                        <div class="fc">
+                            <input type="text" class="tr1" value="4th Quarter"><input name="sum" value="" class="tr2" id="4th_Quarter_1"><input name="sum" value="" class="tr2" id="4th_Quarter_2">
+                        </div>
+                    </div>   
+                </div>
+              </div>
+            </div>   
+            </form> 
+
+
+            <script src="{{ url_for('static', filename='estimation.js') }}" ></script>
+            <script src="{{ url_for('static', filename='ij.js') }}" ></script>
+            
+		    <!-- JavaScript Libraries -->
+			<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+			<script src="{{ url_for('static', filename='wow.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='easing.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='waypoint.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='owl.carrousel.min.js') }}"></script>
+		
+			<!-- Template Javascript -->
+			<script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+</html>
